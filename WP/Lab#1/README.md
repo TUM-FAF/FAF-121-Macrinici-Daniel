@@ -28,7 +28,7 @@ Objectives With Points
 * Make elements to fit window on resize. **(1 pt)**
 * Make elements to interact or change other elements. **(2 pt)**
 * Change behavior of different window actions (at least 3). **(1 pt)**
-* Write [your own PSG](https://github.com/TheRedGuy/Style-Guides/wiki/C-Style-Guide). **(1 pt)**
+* Write your own PSG. **(1 pt)**
 
 Programming Style Guide
 -----------------------
@@ -36,6 +36,35 @@ For this laboratory work, I elaborated a C Programming Style Guide,
 which was inspired by [Rhombus C style guide](https://github.com/nickbjohnson4224/rhombus/wiki/C-style-guide). 
 I also added to this PSG a section specific for Windows Programming with Win32 API. 
 I intend to continue using, and developing this PSG, because it insures code consistency, and readability.
+
+Introduction
+============
+This is a style guide for the C programming language. It was inspired by [Rhombus C style guide](https://github.com/nickbjohnson4224/rhombus/wiki/C-style-guide),
+but has some differences. It was created to ensure consistency in all C/C++ projects, especially for writing programs with Win32 API.
+
+Win32 API specifics
+-------------------
+Naming should follow the [Hungarian notation](http://en.wikipedia.org/wiki/Hungarian_notation) convention (Systems Hungarian notation is preferable to
+Apps Hungarian notation).
+
+Calls to functions with multiple arguments (more than 3), should have each argument on a separate line. However, for functions that are called very often
+(such as MessageBox(), DrawText(), SendMessage(), etc.), it is acceptable to call these functions on a single line. Arguments referring to similar things, such as
+`nHeight` and `nWeight`, or pairs of coordinates (x & y), can share the same line. Also, a series of `NULL`, `0`, or `DEFAULT` arguments can share the same line:
+```C
+// good
+CreateWindowEx(
+      (DWORD)NULL,
+      TEXT("button"),
+      TEXT("Quit"),
+      WS_CHILD | WS_VISIBLE | BS_PUSHBUTTON | BS_OWNERDRAW,
+      220, 260,
+      60, 20,
+      hwnd,
+      (HMENU)IDC_QUIT_BUTTON,
+      hProgramInstance,
+      NULL);
+```
+
 
 Application Creation Steps
 --------------------------
@@ -63,9 +92,6 @@ This is a screenshot of the application in the Windows 7 environment:
 
 Conclusions
 -----------
-Although I don't intend to become a Windows developer, nor I use a Windows system in my development projects, I found this laboratory work very usefull, 
-because I gained experience in Event-Driven Programming, which aided my understanding of this paradigm. 
-I find the knowledge gained during this laboratory work to be very important, because these concepts can be applied not only in Windows Programming, but in developing any system which uses message-sending and Event-Driven Programming.
 
 The Windows API is the source code interface that is used to create Windows applications. I found this laboratory work very useful, because I gained
 experience in Event-Driven Programming, which aided my understanding of this paradigm. I find the knowledge gained during this laboratory work to be very
