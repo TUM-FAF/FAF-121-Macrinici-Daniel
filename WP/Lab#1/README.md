@@ -32,7 +32,7 @@ Objectives With Points
 
 Programming Style Guide
 -----------------------
-For this laboratory work, I elaborated a [C Programming Style Guide](https://github.com/TheRedGuy/Style-Guides/wiki/C-Style-Guide), 
+For this laboratory work, I elaborated a C Programming Style Guide, 
 which was inspired by [Rhombus C style guide](https://github.com/nickbjohnson4224/rhombus/wiki/C-style-guide). 
 I also added to this PSG a section specific for Windows Programming with Win32 API. 
 I intend to continue using, and developing this PSG, because it insures code consistency, and readability.
