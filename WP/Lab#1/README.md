@@ -37,13 +37,14 @@ which was inspired by [Rhombus C style guide](https://github.com/nickbjohnson422
 I also added to this PSG a section specific for Windows Programming with Win32 API. 
 I intend to continue using, and developing this PSG, because it insures code consistency, and readability.
 
-Introduction
-============
+*Introduction
+
 This is a style guide for the C programming language. It was inspired by [Rhombus C style guide](https://github.com/nickbjohnson4224/rhombus/wiki/C-style-guide),
 but has some differences. It was created to ensure consistency in all C/C++ projects, especially for writing programs with Win32 API.
+I will mention the most important differences adopted for my particular programming style.
 
-Win32 API specifics
--------------------
+*Win32 API specifics
+
 Naming should follow the [Hungarian notation](http://en.wikipedia.org/wiki/Hungarian_notation) convention (Systems Hungarian notation is preferable to
 Apps Hungarian notation).
 
