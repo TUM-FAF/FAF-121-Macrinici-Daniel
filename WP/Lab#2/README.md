@@ -48,22 +48,27 @@ For developing the project, I've used the CodeBlocks IDE. The project can be sim
 I organized this laboratory work into three files (main.cpp, resource.h and menu.rc). The last two files store the numerous identifiers to the control handles in the application and also the description of the menu and custom icon.
 The most difficult part was working with scrollbars. When implementing them, two essential functions must be provided:
 
-BOOL SetScrollRange(
-  _In_  HWND hWnd,
-  _In_  int nBar,
-  _In_  int nMinPos,
-  _In_  int nMaxPos,
-  _In_  BOOL bRedraw
-);
+<code>
+
+		BOOL SetScrollRange(
+		  _In_  HWND hWnd,
+		  _In_  int nBar,
+		  _In_  int nMinPos,
+		  _In_  int nMaxPos,
+		  _In_  BOOL bRedraw
+		);
+</code>
 
 , where hWnd is the handle to a scrollbar control or a window with a standard scroll bar, depending on the value of the nBar parameter; nBar [in] Specifies the scroll bar to be set. This parameter can be one of the following values: SB_CTL, SB_HORZ,  SB_VERT. In our case SB_CTL is used because my program emphasizes the work with scrollbar controls, which provides extra functionality.
 
-int SetScrollPos(
-  _In_  HWND hWnd,
-  _In_  int nBar,
-  _In_  int nPos,
-  _In_  BOOL bRedraw
-);
+<code>
+		int SetScrollPos(
+		  _In_  HWND hWnd,
+		  _In_  int nBar,
+		  _In_  int nPos,
+		  _In_  BOOL bRedraw
+		);
+</code>
 
 Here the parameters are essentially the same, except of the last one, which is a bool value that Specifies whether the scroll bar is redrawn to reflect the new scroll box position. If this parameter is TRUE, the scroll bar is redrawn. If it is FALSE, the scroll bar is not redrawn.
 Moreover, when working with scrollbar controls, I had to analyze two cases, namely the case WM_VSCROLL and case WM_HSCROLL messages, in which the behavior of the window (elements) is described.
@@ -71,12 +76,14 @@ What I also found interesting was implementing the keyboard events, which in my 
 
 Regarding the child window controls, an essential function which provided communication is the SendMessage function, which sends the specified message to a window or windows. The SendMessage function calls the window procedure for the specified window and does not return until the window procedure has processed the message.
 
-LRESULT WINAPI SendMessage(
-  _In_  HWND hWnd,
-  _In_  UINT Msg,
-  _In_  WPARAM wParam,
-  _In_  LPARAM lParam
-);
+<code>
+		LRESULT WINAPI SendMessage(
+		  _In_  HWND hWnd,
+		  _In_  UINT Msg,
+		  _In_  WPARAM wParam,
+		  _In_  LPARAM lParam
+		);
+</code>
 
 hWnd [in]- A handle to the window whose window procedure will receive the message.
 Msg [in]- The message to be sent.
@@ -85,11 +92,7 @@ lParam [in]- Additional message-specific information.
 
 
 
-
-
-
 Conclusions
-
 -----------
 
 

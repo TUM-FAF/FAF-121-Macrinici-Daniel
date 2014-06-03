@@ -71,26 +71,29 @@ case WM_PAINT:
 One more important thing regarding the memory:
 Because I used doublebuffering, more memory is used. Which is why, I imposed a limit for the drawn objects in the program to be 30. So in order to prevent overflow, the following code eliberates the memory and then allocates it back for the objects:
 
-if (NrRings == 30)
+<code> if (NrRings == 30)
             {
                 delete [] B;
                 Ring* B = new Ring[30];
                 NrRings = 0;
             }
+</code>
 
 For drawing the objects themselves, Arc function was used, which draws an elliptical arc.
 
-BOOL Arc(
-  _In_  HDC hdc,
-  _In_  int nLeftRect,
-  _In_  int nTopRect,
-  _In_  int nRightRect,
-  _In_  int nBottomRect,
-  _In_  int nXStartArc,
-  _In_  int nYStartArc,
-  _In_  int nXEndArc,
-  _In_  int nYEndArc
-);
+<code>
+		BOOL Arc(
+		  _In_  HDC hdc,
+		  _In_  int nLeftRect,
+		  _In_  int nTopRect,
+		  _In_  int nRightRect,
+		  _In_  int nBottomRect,
+		  _In_  int nXStartArc,
+		  _In_  int nYStartArc,
+		  _In_  int nXEndArc,
+		  _In_  int nYEndArc
+		);
+</code>
 
 , where the first parameter is a handle to the device context where drawing takes place; the following four parameters are describing the upper left coordinate pair of the arc to be drawn and respectively the lower right corner;  and the last four are describing the coordinates of the ending point of the radial line defining the starting and ending point of the arc.
 
