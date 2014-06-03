@@ -81,7 +81,7 @@ Processing the message loop, the WindowProcedure analyzes window messages and ex
 
 Below, I present a wireframe model of the application general layout and functionality, using the [MockFlow](http://mockflow.com/) tool.
 
-![Mockup](https://raw.github.com/TUM-FAF/FAF-121-Macrinici-Daniel/blob/master/WP/Lab%231/pictures/Wireframe1.png)
+![Mockup](https://raw.github.com/TUM-FAF/FAF-121-Macrinici-Daniel/master/WP/Lab%231/pictures/Wireframe1.png)
 
 The dialog bubbles describe each element and its functionality.
 
@@ -89,7 +89,7 @@ Result Application
 ------------------
 This is a screenshot of the application in the Windows 7 environment:
 
-![Screenshot](https://raw.github.com/TUM-FAF/FAF-121-Macrinici-Daniel/blob/master/WP/Lab%231/pictures/Screenshot.PNG)
+![Screenshot](https://raw.github.com/TUM-FAF/FAF-121-Macrinici-Daniel/master/WP/Lab%231/pictures/Screenshot.PNG)
 
 Conclusions
 -----------
